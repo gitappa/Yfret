@@ -13,7 +13,7 @@ class ViewProduct implements ObserverInterface
             $product = $observer->getProduct();
             $product_id = $product->getSku();
 
-            $url = "http://preprod.yfret.com/event/?access_key=8ef315a17a7e45fd8fe3116ada473c9f&object_id=" . $product_id . "&action_type=view&object_type=product";
+            $url = "http://preprod.yfret.com/event/?object_id=" . $product_id . "&action_type=view&object_type=product";
 
             $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
             $urlInterface = $objectManager->get('Magento\Framework\UrlInterface');
